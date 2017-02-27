@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app='directivePractice'>
+
+<head>
+    <meta charset="utf-8">
+    <title>Dir-Practice</title>
+    <link rel="stylesheet" href="css/master.css">
+</head>
+
+<body ng-controller='lessonCtrl'>
+    <div>Line Through<input type="checkbox" ng-model='checked' ng-click='getChecked(checked)'>{{checked}} <button ng-click='hideShow()'>Hide/Show</button></div>
+    <ul>
+        <lesson-hider ng-repeat="lesson in lessons" lesson="lesson" day-alert='announceDay(lesson, day)'></lesson-hider>
+    </ul>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+    <script src="js/lessonCtrl.js" charset="utf-8"></script>
+    <script src="js/lessonServ.js" charset="utf-8"></script>
+    <script src="js/lessonHider.js" charset="utf-8"></script>
+</body>
+
+</html>
